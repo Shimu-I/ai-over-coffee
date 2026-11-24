@@ -1,0 +1,35 @@
+# Source list. Every feed_url below is a CANDIDATE from public knowledge,
+# not a verified fact. Run  scripts/probe_sources.py  from this machine to
+# see which ones really work, are allowed by robots.txt, and are fresh.
+# feed_url: null means "no official feed known" - the probe will try to
+# discover one from the homepage instead of guessing.
+#
+# kind: company | research | industry
+# reliability: 1 (weak) .. 5 (primary source), used later by ranking.
+
+sources:
+  # ---- company announcements ----
+  - {id: openai,        name: "OpenAI",                kind: company,  reliability: 5, feed_url: "https://openai.com/news/rss.xml",                homepage: "https://openai.com/news/"}
+  - {id: anthropic,     name: "Anthropic",             kind: company,  reliability: 5, feed_url: null,                                             homepage: "https://www.anthropic.com/news"}
+  - {id: deepmind,      name: "Google DeepMind",       kind: company,  reliability: 5, feed_url: "https://deepmind.google/blog/rss.xml",           homepage: "https://deepmind.google/discover/blog/"}
+  - {id: google_ai,     name: "Google AI",             kind: company,  reliability: 5, feed_url: "https://blog.google/technology/ai/rss/",         homepage: "https://blog.google/technology/ai/"}
+  - {id: meta_ai,       name: "Meta AI",               kind: company,  reliability: 5, feed_url: null,                                             homepage: "https://ai.meta.com/blog/"}
+  - {id: msft_research, name: "Microsoft Research",    kind: company,  reliability: 5, feed_url: "https://www.microsoft.com/en-us/research/feed/", homepage: "https://www.microsoft.com/en-us/research/blog/"}
+  - {id: nvidia,        name: "NVIDIA Blog",           kind: company,  reliability: 4, feed_url: "https://blogs.nvidia.com/feed/",                 homepage: "https://blogs.nvidia.com/"}
+  - {id: xai,           name: "xAI",                   kind: company,  reliability: 4, feed_url: null,                                             homepage: "https://x.ai/news"}
+  - {id: mistral,       name: "Mistral AI",            kind: company,  reliability: 5, feed_url: null,                                             homepage: "https://mistral.ai/news"}
+  - {id: deepseek,      name: "DeepSeek",              kind: company,  reliability: 5, feed_url: null,                                             homepage: "https://api-docs.deepseek.com/news/"}
+  - {id: huggingface,   name: "Hugging Face Blog",     kind: company,  reliability: 4, feed_url: "https://huggingface.co/blog/feed.xml",           homepage: "https://huggingface.co/blog"}
+  - {id: aws_ml,        name: "AWS Machine Learning",  kind: company,  reliability: 4, feed_url: "https://aws.amazon.com/blogs/machine-learning/feed/", homepage: "https://aws.amazon.com/blogs/machine-learning/"}
+  - {id: cohere,        name: "Cohere",                kind: company,  reliability: 4, feed_url: null,                                             homepage: "https://cohere.com/blog"}
+
+  # ---- research ----
+  - {id: arxiv_cs_ai,   name: "arXiv cs.AI",           kind: research, reliability: 4, feed_url: "https://rss.arxiv.org/rss/cs.AI",                homepage: "https://arxiv.org/list/cs.AI/recent"}
+  - {id: arxiv_cs_lg,   name: "arXiv cs.LG",           kind: research, reliability: 4, feed_url: "https://rss.arxiv.org/rss/cs.LG",                homepage: "https://arxiv.org/list/cs.LG/recent"}
+  - {id: arxiv_cs_cl,   name: "arXiv cs.CL",           kind: research, reliability: 4, feed_url: "https://rss.arxiv.org/rss/cs.CL",                homepage: "https://arxiv.org/list/cs.CL/recent"}
+  - {id: hf_papers,     name: "Hugging Face Papers",   kind: research, reliability: 3, feed_url: null,                                             homepage: "https://huggingface.co/papers"}
+
+  # ---- industry press ----
+  - {id: techcrunch_ai, name: "TechCrunch AI",         kind: industry, reliability: 3, feed_url: "https://techcrunch.com/category/artificial-intelligence/feed/", homepage: "https://techcrunch.com/category/artificial-intelligence/"}
+  - {id: verge_ai,      name: "The Verge AI",          kind: industry, reliability: 3, feed_url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", homepage: "https://www.theverge.com/ai-artificial-intelligence"}
+  - {id: mit_tr_ai,     name: "MIT Technology Review AI", kind: industry, reliability: 4, feed_url: "https://www.technologyreview.com/topic/artificial-intelligence/feed", homepage: "https://www.technologyreview.com/topic/artificial-intelligence/"}

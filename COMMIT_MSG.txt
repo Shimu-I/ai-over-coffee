@@ -1,0 +1,12 @@
+feat: project skeleton, config, SQLite schema and source probe (patch 001)
+
+- Add project layout: src/aoc with one subpackage per pipeline stage,
+  plus config/, scripts/, tests/, templates/ and assets/
+- Add config.yaml and sources.yaml (feed URLs are unverified candidates)
+- Add versioned SQLite schema: sources, articles, clusters,
+  collection_runs, editions, delivery_log
+- Add `aoc init-db` and `aoc status` CLI commands
+- Add scripts/probe_sources.py: robots.txt-aware feed probe with homepage
+  feed discovery; writes data/probe_report.json
+- Add unit tests for config, database and probe (stdlib unittest)
+- Add PATCH_LEVEL and PATCH_LOG to track applied patches

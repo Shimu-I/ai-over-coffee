@@ -1,0 +1,6 @@
+Patch 001 - Project skeleton, config, SQLite schema and source probe
+Requires: nothing (first patch)
+
+Adds the project layout, configuration, database schema and a probe that
+checks which news feeds actually work from your machine.
+Does not collect news yet (that is patch 002).

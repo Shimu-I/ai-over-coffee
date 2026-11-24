@@ -1,0 +1,15 @@
+# secrets and local overrides
+.env
+config/config.local.yaml
+
+# runtime state
+.venv/
+.patch-backups/
+__pycache__/
+*.pyc
+data/*
+!data/.gitkeep
+logs/*
+!logs/.gitkeep
+output/*
+!output/.gitkeep

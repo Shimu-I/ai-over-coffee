@@ -1,0 +1,2 @@
+# Only what the code actually uses today. Later patches add more.
+PyYAML>=6.0

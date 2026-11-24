@@ -1,0 +1,5 @@
+# Files the user is expected to edit. If one already exists, the patch keeps
+# it untouched and, if the shipped version differs, saves it as <file>.new
+config/config.yaml
+config/sources.yaml
+.env.example

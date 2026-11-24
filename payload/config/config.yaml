@@ -1,0 +1,28 @@
+# AI Over Coffee - main configuration.
+# Edit freely: patches never overwrite this file (a new version is saved as
+# config.yaml.new if the shipped default changes).
+# Machine-specific overrides can go in config/config.local.yaml (git-ignored).
+
+publication:
+  name: "AI Over Coffee"
+  tagline: "The AI world, one morning at a time"
+
+schedule:
+  timezone: "Asia/Dhaka"
+  collect_every_minutes: 60
+  edition_time: "06:30"        # build and send, local time
+  health_check_time: "08:00"
+
+paths:
+  data_dir: "data"
+  logs_dir: "logs"
+  output_dir: "output"
+  database: "data/aoc.db"
+
+retention:
+  keep_pdfs_days: 90
+  keep_article_text_days: 60
+  keep_logs_days: 30
+
+health:
+  source_failure_alert_after: 3     # consecutive failed fetches
